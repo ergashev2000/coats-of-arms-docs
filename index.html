@@ -2,19 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coat of Arms</title>
-    <meta name="description" content="Coat of Arms" />
+    <title>coat-of-arms: Country Coats of Arms and Flags for React</title>
     <meta
-      name="keywords"
-      content="coat of arms, family crest, heraldry, heraldic symbols, family history, genealogy, crest designs"
+      name="description"
+      content="Free React components for 227 country coats of arms and 270 flags as SVG. TypeScript types, lazy loading and server rendering. Install with npm i coat-of-arms."
     />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Islomjon" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Islomjon Ergashev" />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+
+    <meta name="theme-color" content="#eef1f6" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a1020" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Link previews (Telegram, X, Facebook, LinkedIn, Slack) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="coat-of-arms" />
+    <meta property="og:title" content="coat-of-arms: Country Coats of Arms and Flags for React" />
+    <meta
+      property="og:description"
+      content="227 country coats of arms and 270 flags as SVG React components. TypeScript, lazy loading, server rendering."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Coats of arms of Uzbekistan and other countries with the text coat-of-arms for React" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="coat-of-arms: Country Coats of Arms and Flags for React" />
+    <meta
+      name="twitter:description"
+      content="227 country coats of arms and 270 flags as SVG React components."
+    />
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "coat-of-arms",
+            "url": "%VITE_SITE_URL%/",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "name": "coat-of-arms",
+            "description": "React components and CSS for 227 country coats of arms and 270 flags as SVG.",
+            "url": "%VITE_SITE_URL%/",
+            "codeRepository": "https://github.com/ergashev2000/coat-of-arms",
+            "programmingLanguage": ["TypeScript", "JavaScript", "CSS"],
+            "runtimePlatform": "React",
+            "license": "https://opensource.org/licenses/MIT",
+            "keywords": "coat of arms, flags, react, svg, heraldry, national emblem, iso 3166",
+            "author": { "@type": "Person", "name": "Islomjon Ergashev", "url": "https://github.com/ergashev2000" },
+            "sameAs": ["https://www.npmjs.com/package/coat-of-arms", "https://github.com/ergashev2000/coat-of-arms"]
+          }
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Apply a saved theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem('coa-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
